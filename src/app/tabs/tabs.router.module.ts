@@ -8,6 +8,15 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+          path: 'main',
+          children: [
+              {
+                  path: '',
+                  loadChildren: '../main/main.module#MainPageModule'
+              }
+          ]
+      },
+      {
         path: 'tab1',
         children: [
           {
@@ -35,15 +44,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'mine',
+        children: [
+            {
+              path: '',
+              loadChildren: '../mine/mine.module#MinePageModule'
+            }
+        ]
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/main',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/main',
     pathMatch: 'full'
   }
 ];

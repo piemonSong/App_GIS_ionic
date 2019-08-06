@@ -1,5 +1,7 @@
 {
   "name": "argi_app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
