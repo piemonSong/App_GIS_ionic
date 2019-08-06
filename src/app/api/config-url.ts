@@ -1,0 +1,1 @@
+export const LocationUrl = 'http://api.tianditu.gov.cn/geocoder';
